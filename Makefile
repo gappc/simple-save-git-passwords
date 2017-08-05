@@ -7,9 +7,9 @@ _pwd_prompt:
 
 # Encrypt password file
 encrypt_conf:
-    openssl cast5-cbc -e -in ${PASSWORD_FILE} -out ${ENCRYPTED_FILE}
+	openssl cast5-cbc -e -in ${PASSWORD_FILE} -out ${ENCRYPTED_FILE}
 
 # Decrypt password file
 decrypt_conf:
-    openssl cast5-cbc -d -in ${ENCRYPTED_FILE} -out ${PASSWORD_FILE}
-    chmod 600 ${PASSWORD_FILE}
+	openssl cast5-cbc -d -in ${ENCRYPTED_FILE} -out ${PASSWORD_FILE}
+	chmod 600 ${PASSWORD_FILE}
